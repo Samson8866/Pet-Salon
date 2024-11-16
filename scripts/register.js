@@ -32,28 +32,22 @@ let pet3={
     Service:"Dog Spa",
     breed:"Pitbull" 
 }
+let pet4={
+    name:"Sylus",
+    age:3,
+    gender:"Male",
+    Service:"Vaccine",
+    breed:"Doodle" 
+}
+
+
 //push objects into the array
-pets.push(pet1,pet2,pet3);
-console.log(pets);
-console.log("We have " + pets.length + " pets");
+pets.push(pet1,pet2,pet3,pet4);
 
 function displayPetNames(){   
-console.log(pets[0].name);
-console.log(pets[1].name);
-console.log(pets[2].name);
-console.log("We have " + pets.length + " pets");
+    for(let i=0;i<4;i++){
+    document.getElementById("petList").innerHTML+= `<li> ${pets[i].name} </li>`;
+    }
+document.getElementById("petList").innerHTML+= "We have " + pets.length + " pets";
 }
 displayPetNames()
-
-
-const names = ["Scooby", "Scrappy", "Midnight"];
-
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-    
-}    
-const displayNames = document.querySelector("#display-names");
-for (let i = 0; i < names.length; i++) {
-    displayNames.innerHTML += `<h1>${names[i]}</h1>`
-    
-}    
