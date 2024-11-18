@@ -7,47 +7,47 @@ let petSalon = {
         zip:"92154"
     }
 }
-
-//creating the pets
-let pet1={
-    name:"Scooby",
-    age:4,
-    gender:"Male",
-    service:"Wash",
-    breed:"Golden Retriever" 
+//object constructor
+function Pet(name,age,gender,breed,service){
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+    this.breed=breed;
+    this.servive=service;
 }
 
-let pet2={
-    name:"Scrappy",
-    age:2,
-    gender:"Male",
-    Service:"Hair cut",
-    breed:"Golden Doodle" 
+//add breed and service
+//register function
+
+//register function
+function register(){
+    let inputName=document.getElementById("txtName").value;
+    let inputAge=document.getElementById("txtAge").value;
+    let inputGender=document.getElementById("txtGender").value;
+    let inputBreed=document.getElementById("txtBreed").value;
+    let inputService=document.getElementById("txtService").value;
+    let inputPetType=document.getElementById("txtPetType").value;
+
+    console.log(inputName,inputAge,inputGender,inputBreed,inputService,inputPetType);
+    //create the object
+    let newPet = new Pet(inputName,inputAge,inputGender,inputBreed,inputService,inputPetType);
+    //push the obj to the array
+    pets.push(newPet);
+    //clear an input document.getElementById("txtName").value="";
+    //display the obj on the console
+    console.log(pets);
+}
+//validation function
+
+function init(){
+    //execution code should be inside of this function
+    let pet1 = new Pet("Scooby",99,"Male","retriever","groomm");//creating an obj
+    //create two more pets
+    let pet2 = new Pet("Scrappy",5,"Male","German Shepard","dog spa");
+    let pet3 = new Pet("Midnight",8,"Female","Pitbull","Bath");
+    console.log(pet1,pet2,pet3);
 }
 
-let pet3={
-    name:"Midnight",
-    age:8,
-    gender:"Female",
-    Service:"Dog Spa",
-    breed:"Pitbull" 
-}
-let pet4={
-    name:"Sylus",
-    age:3,
-    gender:"Male",
-    Service:"Vaccine",
-    breed:"Doodle" 
-}
+window.onload=init;//wait to render the HTML
 
 
-//push objects into the array
-pets.push(pet1,pet2,pet3,pet4);
-
-function displayPetNames(){   
-    for(let i=0;i<4;i++){
-    document.getElementById("petList").innerHTML+= `<li> ${pets[i].name} </li>`;
-    }
-document.getElementById("petList").innerHTML+= "We have " + pets.length + " pets";
-}
-displayPetNames()

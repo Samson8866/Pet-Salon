@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Registration</h1>
+<body>
+    //submission
+const form =document.getElementById('form');
+const name =document.getElementById('Name');
+const age =document.getElementById('age');
+const gender =document.getElementById('gender');
+const breed =document.getElementById('breed');
+const service =document.getElementById('service');
+const petType =document.getElementById('petType');
+form.addEventListener('register', function(e){
+    e.preventDefault();
+
+   const nameValue = name.value
+   const ageValue =age.value
+   const genderValue =gender.value
+   const breedValue =breed.value
+   const serviceValue =service.value
+   const petTypeValue =petType.value
+
+   localStorage .setItem('name', nameValue);
+   localStorage .setItem('age', ageValue);
+   localStorage .setItem('gender', genderValue);
+   localStorage .setItem('breed', breedValue);
+   localStorage .setItem('service', serviceValue);
+   localStorage .setItem('petType', petTypeValue);
+})
+</body>
+</html>

@@ -29,14 +29,66 @@
 
     <main class="container">
         <h2>Register</h2>
-  
-    
-    <button class="btn btn-primary">Display names</button>
-
-    <ul id="petList">
-
-    </ul>
-
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="txtName" placeholder="Name" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Age:</label>
+                        <input type="number" class="form-control" id="txtAge" placeholder="Age">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Gender:</label>
+                        <select type="text" class="form-control" id="txtGender">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Breed:</label>
+                        <input type="text" class="form-control" id="txtBreed">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label">Service:</label>
+                            <select type="text" class="form-control" id="txtService">
+                                <option value=""></option>
+                                <option value="Haircut">Haircut</option>
+                                <option value="Pet Wash">Pet Wash</option>
+                                <option value="Vaccines">Vaccine</option>
+                                <option value="Nail Cut">Nail Cut</option>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label">Pet Type:</label>
+                            <select type="text" class="form-control" id="txtPetType">
+                                <option value=""></option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                                <option value="Bird">Bird</option>
+                                <option value="Bunny">Bunny</option>
+                                <option value="Hamster">Hamster</option>
+                        </div>
+                    </div>
+        </div>
+        
+        <div class="mb-3">
+            <button class="btn btn-primary" onclick="register()">Register</button>
+         </div>
     </main> 
     <script src="./scripts/register.js"></script>
 </body>
