@@ -1,0 +1,13 @@
+body{
+    background: darkslateblue;
+    color: white;
+}
+
+.error {
+    background-color: rgb(255, 179, 179);
+}
+
+.card-body{
+    color: white;
+    background-color: blueviolet
+}
