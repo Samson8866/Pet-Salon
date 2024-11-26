@@ -1,5 +1,5 @@
 function displayPet(){
-    let card = document.getElementById("pets");
+    let tableBody = document.getElementById("pets");
     let result = "";
 
     for(let i=0; i<pets.length; i++){
@@ -7,15 +7,35 @@ function displayPet(){
         let pet = pets[i];
 
         result += `
-            <div class="card mx-2 col-3">
-                <div class="card-body">
-                    <h5 class="card-title">${pet.name} </h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">${pet.breed}</h6>
-                    <p class="card-text">${pet.gender}, ${pet.age} years.</p>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </div>
-            </div>
+            <tr>
+                <td>${pet.name}</td>
+                <td>${pet.age}</td>
+                <td>${pet.gender}</td>
+                <td>${pet.breed}</td>
+                <td>${pet.service}</td>
+                <td>${pet.type}</td>
+                <td>${pet.petSize}</td>
+                <td>${pet.temperment}</td>
+                <td><button class="btn btn-danger btn-sm" onclick="deletePet(${i})">Delete</button></td>
+                </tr>
         `
     }
-    card.innerHTML = result;
+    tableBody.innerHTML = result;
+    displayInfo();
 }
+
+function displayInfo(){
+    let groomingDiv = document.getElementById("gTotal");
+    let totalDiv =  document.getElementById("total");
+    let grooming=0;
+    let vaccine=0;
+    totalDiv.innerHTML= pets.length;// total pets
+    for(let i=0; i<pets.length; i++){
+      console.log(pets[i].service)
+      if(pets[i].service=="Grooming"){
+        grooming++;
+      }
+    }
+  }
+
+ 

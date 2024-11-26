@@ -36,6 +36,15 @@ function isValid(pet){
     return validation
 }
 
+//delete function
+function deletePet(){
+    document.getElementById(petId).remove();
+    pets.splice(petId,1);
+    displayPet();
+    displayInfo();
+}
+
+
 //add breed and service
 //register function
 
@@ -91,14 +100,14 @@ function init(){
     let pet2 = new Pet("Scrappy",5,"Male","German Shepard","dog spa");
     let pet3 = new Pet("Midnight",8,"Female","Pitbull","Bath");
     pets.push(pet1,pet2,pet3);
-
     console.log(pet1,pet2,pet3);
 
     displayPet();
 }
 
-
-
+function registeredPets(){
+$("#btnRegister").on('click', register);
+}
 
 window.onload=init;//wait to render the HTML
 
