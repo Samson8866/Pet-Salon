@@ -16,9 +16,7 @@ function displayPet(){
                 <td>${pet.type}</td>
                 <td>${pet.petSize}</td>
                 <td>${pet.temperment}</td>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <td><button class="btn btn-danger me-md-2" onclick="deletePet(${pet[i].val})">Delete</button></td>
-                </div>
+                <td><button class="btn btn-danger btn-sm" onclick="deletePet(${i})">Delete</button></td>
                 </tr>
         `
     }
@@ -40,6 +38,4 @@ function displayInfo(){
     }
   }
 
-function deletePet(){
-  
-}
+ 

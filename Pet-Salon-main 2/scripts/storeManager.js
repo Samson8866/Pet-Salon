@@ -10,7 +10,7 @@ function save(service){
 function read(){
     let data = localStorage.getItem(LS_KEY);
     if(!data){
-        return[]; //create the array
+        return[];
     }else{
         let list = JSON.parse(data);
         return list;

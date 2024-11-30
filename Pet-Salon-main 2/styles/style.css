@@ -1,10 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    height: 100%;
+body{
+    background: rgb(57, 39, 158);
+    color: white;
 }
 
 .error {
@@ -21,7 +17,6 @@ footer{
     background-color: #111;
 }
 .footerContainer{
-    min-height: 100%;
     width: 100%;
     padding: 70px 30px 20px;
 }
@@ -92,6 +87,4 @@ footer{
     margin: 0px 5px;
 }
 
-.serve{
-    display: flex;
-}
+

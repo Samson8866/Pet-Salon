@@ -1,4 +1,4 @@
-let inputDescription =$("#txtService");
+let inputDescription =$("#txtDescription");
 let inputPrice = $("#txtPrice");
 
 //constructor Service

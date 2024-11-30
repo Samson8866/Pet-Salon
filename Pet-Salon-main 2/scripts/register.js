@@ -8,15 +8,13 @@ let petSalon = {
     }
 }
 //object constructor
-function Pet(name,age,gender,breed,service,petType,petSize,temperment){
+function Pet(name,age,gender,breed,service,petType){
     this.name=name;
     this.age=age;
     this.gender=gender;
     this.breed=breed;
     this.servive=service;
     this.petType=petType;
-    this.petSize=petSize;
-    this.temperment=temperment;
 }
 
 //validation
@@ -39,32 +37,13 @@ function isValid(pet){
 }
 
 //delete function
-function deletePets(){
+function deletePet(){
     document.getElementById(petId).remove();
     pets.splice(petId,1);
     displayPet();
     displayInfo();
 }
 
-//Get Services from Local Storage
-function getServices(){
-    console.log("getServices function")
-    let services = read();
-    console.log("Services: ", services)
-    let option = "";
-
-    for(let i=0; i<services.length; i++){
-        let service = services[i];
-        console.log(" *Service: ", service)
-
-        option +=`
-        <option value="${service.description}">${service.description} - $ ${service.price}</option>
-        `
-    }
-    console.log("options: ", option);
-    
-    $("#txtService").append(option);
-}
 
 //add breed and service
 //register function
@@ -121,21 +100,9 @@ function init(){
     let pet2 = new Pet("Scrappy",5,"Male","German Shepard","dog spa");
     let pet3 = new Pet("Midnight",8,"Female","Pitbull","Bath");
     pets.push(pet1,pet2,pet3);
+    console.log(pet1,pet2,pet3);
 
     displayPet();
-    getServices();
-
-    $("#mode").on("click", function(){
-        if($("body").css("background-color") === 'rgb(0, 0, 0)'){  
-          console.log("*** Dark mode ***");
-            $("body").css("background-color", "white");
-            $(this).text("Dark mode");
-        }else {
-            console.log("*** Light mode ***");
-            $("body").css("color", "gray").css("background-color", "black");
-            $(this).text("Light mode");
-        }
-    });
 }
 
 function registeredPets(){

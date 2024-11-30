@@ -10,6 +10,14 @@
       </table>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       body{
+        background-image: url(./Images/the-importance-of-dog-grooming.webp);
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-position: center;
+       }
+    </style>
 </head>
 <body>
     <header>
@@ -22,13 +30,11 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-link active" aria-current="page" href="./MyPetSalon.html">Home</a>
+                      <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                       <a class="nav-link" href="./services.html">Services</a>
                       <a class="nav-link" href="#">Register</a>
                     </div>
                   </div>
-
-                  <button id="mode" class="btn bg-dark text-white">Dark mode</button>
                 </div>
               </nav>
         </div>
@@ -74,11 +80,10 @@
                             <label class="form-label">Service:</label>
                             <select type="text" class="form-control" id="txtService">
                                 <option value="" disabled selected>-- Select a Service --</option>
-                                <!-- <option value="Haircut">Haircut</option>
+                                <option value="Haircut">Haircut</option>
                                 <option value="Pet Wash">Pet Wash</option>
                                 <option value="Vaccines">Vaccine</option>
                                 <option value="Nail Cut">Nail Cut</option>
-                                <option value="Grooming">Grooming</option> -->
                             </select>
                         </div>
                     </div>
@@ -99,7 +104,7 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label class="form-label">Pet Size:</label>
-                                <select type="text" class="form-control" id="txtSize">
+                                <select type="text" class="form-control" id="txtService">
                                     <option value="" disabled selected>-- Select a Size --</option>
                                     <option value="Small">Small</option>
                                     <option value="Medium">Medium</option>
@@ -110,7 +115,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label class="form-label">Temperment</label>
-                            <select type="text" class="form-control" id="txtTemperement">
+                            <select type="text" class="form-control" id="txtPetType">
                                 <option value=""disabled selected>-- Select --</option>
                                 <option value="Friendly">Friendly</option>
                                 <option value="Aggressive">Aggressive</option>
@@ -130,9 +135,9 @@
         </div>
         <div id="pets" class="container row">
 
-        <table>
+        <table border="2">
             <thead>
-                <tr>
+                <tr align="center">
                     <th></th>
                     <th scope="col">Name</th>
                     <th scope="col">Age</th>
@@ -150,8 +155,6 @@
         </main> 
             
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="./scripts/storeManager.js"></script>
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
 
